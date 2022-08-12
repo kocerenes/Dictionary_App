@@ -1,4 +1,4 @@
-package com.enesk.dictionaryapp.ui.theme
+package com.enesk.dictionaryapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
