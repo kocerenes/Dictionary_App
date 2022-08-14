@@ -6,7 +6,7 @@ import com.enesk.dictionaryapp.domain.model.Phonetic
 fun PhoneticDto.toPhonetic(): Phonetic {
     return Phonetic(
         audio = audio,
-        license = license,
+        license = license!!.toLicense(),
         sourceUrl = sourceUrl,
         text = text
     )

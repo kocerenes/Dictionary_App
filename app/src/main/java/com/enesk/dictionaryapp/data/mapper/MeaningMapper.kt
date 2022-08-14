@@ -6,7 +6,7 @@ import com.enesk.dictionaryapp.domain.model.Meaning
 fun MeaningDto.toMeaning(): Meaning {
     return Meaning(
         antonyms = antonyms,
-        definitions = definitions,
+        definitions = definitions!!.map { it?.toDefinition() },
         partOfSpeech = partOfSpeech,
         synonyms = synonyms
     )
