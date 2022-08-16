@@ -21,3 +21,12 @@ fun WordInfoEntity.toWordInfo(): WordInfo{
         license = license
     )
 }
+
+fun WordInfoDto.toWordInfoEntity(): WordInfoEntity{
+    return WordInfoEntity(
+        meanings = meanings!!.map { it.toMeaning() },
+        license = license!!.toLicense(),
+        phonetic = phonetic!!,
+        word = word!!
+    )
+}
