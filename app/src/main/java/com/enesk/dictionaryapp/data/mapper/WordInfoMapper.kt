@@ -6,7 +6,6 @@ import com.enesk.dictionaryapp.domain.model.WordInfo
 
 fun WordInfoDto.toWordInfo(): WordInfo {
     return WordInfo(
-        license = license!!.toLicense(),
         meanings = meanings!!.map { it.toMeaning() },
         phonetic = phonetic,
         word = word
@@ -17,15 +16,14 @@ fun WordInfoEntity.toWordInfo(): WordInfo{
     return WordInfo(
         meanings = meanings,
         word = word,
-        phonetic = phonetic,
-        license = license
+        phonetic = phonetic
     )
 }
 
 fun WordInfoDto.toWordInfoEntity(): WordInfoEntity{
     return WordInfoEntity(
         meanings = meanings!!.map { it.toMeaning() },
-        license = license!!.toLicense(),
+        //license = license!!.toLicense(),
         phonetic = phonetic!!,
         word = word!!
     )
